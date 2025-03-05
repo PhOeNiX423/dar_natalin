@@ -1,0 +1,30 @@
+[
+    {
+      "id": 1,
+      "title": "Флаер для онлайн-магазина спортивной обуви",
+      "description": "t&f",
+      "image_url": "images/catalog/tf.webp",
+      "tags": ["печатная_продукция"]
+    },
+    {
+      "id": 2,
+      "title": "Веб-сайт по продаже наушников",
+      "description": "Beats Solo3 Wireless",
+      "image_url": "images/catalog/beats.webp",
+      "tags": ["веб-дизайн"]
+    },
+    {
+        "id": 3,
+        "title": "Лендинг для фермерского сообщества",
+        "description": "Pro.Настоящее",
+        "image_url": "images/catalog/pronas.webp",
+        "tags": ["веб-дизайн"]
+    },
+    {
+        "id": 4,
+        "title": "-",
+        "description": "-",
+        "image_url": "images/catalog/pronas.webp",
+        "tags": ["презентация"]
+    }
+]
