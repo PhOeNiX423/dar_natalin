@@ -7,7 +7,7 @@
 }
 
 /* Адаптивность: при маленьком экране блоки становятся в столбец */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .about-container {
         flex-direction: column;
         text-align: center;
@@ -16,7 +16,7 @@
     .tech-stack {
         justify-content: center;
     }
-}
+} */
 
 html {
     scroll-behavior: smooth;
@@ -31,9 +31,85 @@ body {
 }
 
 .container {
-    max-width: 1200px; /* Оптимальная ширина */
-    margin: 0 auto; /* Центрируем по центру экрана */
-    padding: 0 20px; /* Делаем небольшие отступы от краев */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Обо мне */
+.about-card {
+    display: flex;
+    align-items: center; /* Выравнивание по вертикали */
+    justify-content: center; /* Центрирование по горизонтали */
+    gap: 30px; /* Отступ между фото и текстом */
+    max-width: 800px; /* Ограничиваем ширину, чтобы блок не растягивался */
+    margin: 0 auto 10px; /* Центрируем + отступ снизу */
+    padding: 20px;
+    text-align: left; /* Делаем текст по центру на мобильных */
+}
+
+.about-photo {
+    display: flex;
+    align-items: center; /* Выравнивание по вертикали */
+    justify-content: center;
+}
+
+.about-photo img {
+    width: auto; /* Автоматическая ширина */
+    height: 100%; /* Подстраивается под высоту текста */
+    max-height: 160px; /* Максимальная высота */
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #E3D12D;
+}
+
+.about-text {
+    max-width: 400px;
+}
+
+.about-text h2 {
+    font-size: 22px;
+    /* margin-top: 10px;*/
+    margin-bottom: 10px; 
+}
+
+.about-text p {
+    margin-bottom: 10px;
+}
+
+.tech-stack {
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+}
+
+.tech-stack img {
+    width: 40px; 
+    height: 40px;
+}
+
+/* 📌 Адаптация для мобильных (ширина экрана < 768px) */
+@media (max-width: 768px) {
+    .about-card {
+        flex-direction: column; /* Размещаем блоки в столбец */
+        text-align: center; /* Центрируем текст */
+        gap: 10px; /* Отступы между элементами */
+    }
+
+    .about-photo img {
+        width: 130px; /* Уменьшаем фото на мобильных */
+        height: 130px;
+    }
+
+    .tech-stack {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .tech-stack img {
+        width: 35px; /* Чуть меньше иконки на моб. */
+        height: 35px;
+    }
 }
 
 /* Фильтры */
@@ -48,6 +124,8 @@ body {
 
 .filter-button {
     padding: 10px 20px;
+    color: #111113 !important;
+    -webkit-text-fill-color: #111113;
     border: 1px solid #111113;
     background-color: #f8f8f8;
     border-radius: 100px;
@@ -74,8 +152,7 @@ body {
 }
 
 .case {
-    background: white;
-    padding: 10px;
+    background: rgba(255, 255, 255, 0.113);
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
@@ -92,12 +169,13 @@ body {
 }
 
 .case h3 {
-    margin-top: 10px;
-    font-size: 18px;
+    padding: 5px 10px 5px 10px;
+    font-size: 14px;
 }
 
 .case p {
-    font-size: 14px;
+    padding: 0 10px 10px 10px;
+    font-size: 12px;
     color: #777;
 }
 
@@ -134,62 +212,25 @@ body {
     background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #11111335 50%, rgba(0, 0, 0, 0) 100%);
 }
 
-/* Обо мне */
-#about-contacts {
+/* Контакты */
+#contacts {
 
     padding: 40px 20px;
 }
 
-.about-container {
+.contacts-container {
     display: flex;
     gap: 20px;
     justify-content: center;
     align-items: flex-start;
-    max-width: 1000px;
+    max-width: 500px;
     margin: 0 auto;
 }
 
-/* Общий стиль карточек */
-.about-card, .contact-card {
+.contact-card {
     padding: 20px;
     flex: 1;
     min-width: 300px;
-}
-
-/* Стили для блока "Обо мне" */
-.about-photo img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #E3D12D;
-    /* animation: pulse 3s infinite ease-in-out; */
-}
-
-@keyframes pulse {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
-    }
-}
-
-.about-text h2 {
-    font-size: 22px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.tech-stack {
-    margin-top: 15px;
-    display: flex;
-    gap: 10px;
-}
-
-.tech-stack img {
-    width: 40px;
-    height: 40px;
 }
 
 /* Стили для блока "Как меня найти?" */
@@ -261,7 +302,7 @@ footer {
     bottom: 20px;
     right: 20px;
     background: rgb(227, 209, 45); /* Цвет кнопки */
-    color: #111113;
+    color: #131311;
     font-size: 16px;
     font-weight: bold;
     padding: 12px 20px;
@@ -290,54 +331,10 @@ footer {
     }
 }
 
-/* Добавляем пульсацию */
-#contact-button:hover {
-    animation: pulse 1.5s infinite;
-}
-
 /* Уменьшаем кнопку на мобильных */
 @media (max-width: 768px) {
     #contact-button {
         font-size: 14px;
         padding: 10px 16px;
-    }
-}
-
-@media (max-width: 768px) {
-    /* Контейнер "Обо мне" становится столбцом */
-    .about-container {
-        flex-direction: column; /* Блоки в колонку */
-        align-items: center; /* Выравниваем по центру */
-        text-align: center; /* Выравниваем текст */
-        gap: 30px; /* Отступ между блоками */
-    }
-
-    /* Блок "Обо мне" */
-    .about-card {
-        width: 90%; /* Делаем адаптивную ширину */
-    }
-
-    /* Картинка "Обо мне" */
-    .about-photo img {
-        width: 100px; /* Уменьшаем размер фото */
-        height: 100px;
-    }
-
-    /* Блок "Как меня найти?" */
-    .contact-card {
-        width: 90%; /* Делаем блок адаптивным */
-        padding: 15px; /* Уменьшаем отступы */
-        text-align: center;
-    }
-
-    /* Иконки технологий (стек) */
-    .tech-stack {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .tech-stack img {
-        width: 35px; /* Чуть меньше на мобильных */
-        height: 35px;
     }
 }

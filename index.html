@@ -26,16 +26,16 @@
         });
 
         // 3. Блокируем комбинации клавиш (Ctrl + S, Ctrl + U, Ctrl + P, F12)
-        // document.addEventListener("keydown", (event) => {
-        //   if (
-        //     (event.ctrlKey &&
-        //       (event.key === "s" || event.key === "u" || event.key === "p")) ||
-        //     event.key === "F12"
-        //   ) {
-        //     event.preventDefault(); // Отключаем сохранение, просмотр кода и печать
-        //     alert("Действие запрещено!");
-        //   }
-        // });
+        document.addEventListener("keydown", (event) => {
+          if (
+            (event.ctrlKey &&
+              (event.key === "s" || event.key === "u" || event.key === "p")) ||
+            event.key === "F12"
+          ) {
+            event.preventDefault(); // Отключаем сохранение, просмотр кода и печать
+            alert("Действие запрещено!");
+          }
+        });
 
         // 4. Запрещаем скачивание изображений (добавляем атрибут "oncontextmenu='return false'")
         document.querySelectorAll("img").forEach((img) => {
@@ -47,6 +47,25 @@
   </head>
   <body>
     <div class="container">
+      <div class="about-card">
+        <div class="about-photo">
+          <img src="images/about/avatar.jpg" alt="Моё фото" />
+        </div>
+        <div class="about-text">
+          <h2>Привет! 👋</h2>
+          <p>
+            Я - <strong>Дарья</strong>, занимаюсь дизайном и разработкой
+            интерфейсов. Люблю создавать стильные и удобные решения.
+          </p>
+          <div class="tech-stack">
+            <img src="images/about/figma.png" alt="Figma" />
+            <img src="images/about/ai.png" alt="Ai" />
+            <img src="images/about/ps.png" alt="Ps" />
+            <img src="images/about/chatgpt.png" alt="ChatGPT" />
+            <img src="images/about/blender.png" alt="Blender" />
+          </div>
+        </div>
+      </div>
       <div id="filter-buttons">
         <!-- Перечень тегов: маркетплейсы, печатная_продукция, веб-дизайн, презентация, упаковка, мобильные приложения, социальные сети, логотип, -->
         <button class="filter-button" data-tag="маркетплейсы">
@@ -61,32 +80,10 @@
       </div>
 
       <div id="case-container"></div>
-      <div class="section-divider"></div>
+      <!-- <div class="section-divider"></div> -->
 
-      <section id="about-contacts">
-        <div class="about-container">
-          <!-- Блок "Обо мне" -->
-          <div class="about-card">
-            <div class="about-photo">
-              <img src="images/about/avatar.jpg" alt="Моё фото" />
-            </div>
-            <div class="about-text">
-              <h2>Привет! 👋</h2>
-              <p>
-                Я - <strong>Дарья</strong>, занимаюсь дизайном и разработкой
-                интерфейсов. Люблю создавать стильные и удобные решения.
-              </p>
-              <div class="tech-stack">
-                <img src="images/about/figma.png" alt="Figma" />
-                <img src="images/about/ai.png" alt="Ai" />
-                <img src="images/about/ps.png" alt="Ps" />
-                <img src="images/about/chatgpt.png" alt="ChatGPT" />
-                <img src="images/about/blender.png" alt="Blender" />
-              </div>
-            </div>
-          </div>
-
-          <!-- Блок "Как меня найти?" -->
+      <section id="contacts">
+        <div class="contacts-container">
           <div class="contact-card">
             <h2>Как меня найти? 📍</h2>
             <p>Вы можете связаться со мной любым удобным способом:</p>
@@ -217,7 +214,7 @@
       .getElementById("contact-button")
       .addEventListener("click", function () {
         document
-          .getElementById("about-contacts")
+          .getElementById("contacts")
           .scrollIntoView({ behavior: "smooth" });
       });
   </script>
