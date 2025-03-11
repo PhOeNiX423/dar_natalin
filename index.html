@@ -33,7 +33,6 @@
             event.key === "F12"
           ) {
             event.preventDefault(); // Отключаем сохранение, просмотр кода и печать
-            alert("Действие запрещено!");
           }
         });
 
@@ -68,14 +67,21 @@
       </div>
       <div id="filter-buttons">
         <!-- Перечень тегов: маркетплейсы, печатная_продукция, веб-дизайн, презентация, упаковка, мобильные приложения, социальные сети, логотип, -->
-        <button class="filter-button" data-tag="маркетплейсы">
-          маркетплейсы
+        <button class="filter-button" data-tag="UX_UI">
+          UX/UI
         </button>
+        <button class="filter-button" data-tag="веб_дизайн">веб-дизайн</button>
+        <button class="filter-button" data-tag="мобильное_приложение">мобильное приложение</button>
         <button class="filter-button" data-tag="печатная_продукция">
-          печатная продукция
+          полиграфия
         </button>
-        <button class="filter-button" data-tag="веб-дизайн">веб-дизайн</button>
         <button class="filter-button" data-tag="презентация">презентация</button>
+        <button class="filter-button" data-tag="3D">
+          3D
+        </button>
+        <button class="filter-button" data-tag="ии">
+          генеративные изображения
+        </button>
         <span id="reset-button" class="reset-filter">Сбросить фильтр</span>
       </div>
 

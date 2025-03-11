@@ -12,7 +12,7 @@
       "title": "Веб-сайт по продаже наушников",
       "description": "Beats Solo3 Wireless",
       "image_url": "images/catalog/beats.webp",
-      "tags": ["веб-дизайн"],
+      "tags": ["веб_дизайн", "UX_UI"],
       "link": "-"
     },
     {
@@ -20,31 +20,55 @@
         "title": "Лендинг фермерского сообщества",
         "description": "Pro.Настоящее",
         "image_url": "images/catalog/pronas.webp",
-        "tags": ["веб-дизайн"],
+        "tags": ["веб_дизайн", "UX_UI"],
         "link": "-"
     },
     {
         "id": 4,
         "title": "Главная страница интернет-магазина свечей",
         "description": "nobby",
-        "image_url": "images/catalog/nobby.png",
-        "tags": ["веб-дизайн"],
+        "image_url": "images/catalog/nobby.jpg",
+        "tags": ["веб_дизайн", "UX_UI"],
         "link": "-"
     },
     {
       "id": 5,
       "title": "Лендинг сервиса по аренде премиальных автомобилей",
       "description": "LUXORIDES",
-      "image_url": "images/catalog/luxorides.png",
-      "tags": ["веб-дизайн"],
+      "image_url": "images/catalog/luxorides.jpg",
+      "tags": ["веб_дизайн", "UX_UI"],
       "link": "https://phoenix423.github.io/cars-hw/"
-  },
-  {
-    "id": 6,
-    "title": "Главная страница онлайн школы",
-    "description": "U.XI",
-    "image_url": "images/catalog/uxi.png",
-    "tags": ["веб-дизайн"],
-    "link": "-"
-}
+    },
+    {
+      "id": 6,
+      "title": "Главная страница онлайн школы",
+      "description": "U.XI",
+      "image_url": "images/catalog/uxi.jpg",
+      "tags": ["веб_дизайн", "UX_UI"],
+      "link": "-"
+    },
+    {
+      "id": 7,
+      "title": "Мобильное приложение для медитаций",
+      "description": "CalMe",
+      "image_url": "images/catalog/meditation.jpg",
+      "tags": ["мобильное_приложение", "UX_UI"],
+      "link": "-"
+    },
+    {
+      "id": 8,
+      "title": "Главная страница ювелирного интернет-магазина",
+      "description": "JewelryStore",
+      "image_url": "images/catalog/jewelry.jpg",
+      "tags": ["веб_дизайн", "UX_UI"],
+      "link": "-"
+    },
+    {
+      "id": 9,
+      "title": "Ггазина",
+      "description": "JewelryStore",
+      "image_url": "images/catalog/presentation.jpg",
+      "tags": ["веб_дизайн", "UX_UI"],
+      "link": "-"
+    }
 ]

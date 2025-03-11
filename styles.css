@@ -117,9 +117,8 @@ body {
     display: flex;
     align-items: center; /* Выравниваем элементы по вертикали */
     gap: 10px;
-    margin: 10px 0 20px 0;
     overflow-x: auto;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 }
 
 .filter-button {
@@ -132,6 +131,7 @@ body {
     cursor: pointer;
     box-sizing: border-box;
     transition: 0.3s;
+    white-space: nowrap;
 }
 
 .filter-button:hover {
@@ -144,6 +144,15 @@ body {
     border-color: #E3D12D;
 }
 
+@media (min-width: 1024px) {
+    #filter-buttons {
+        max-width: 900px; /* Ограничиваем ширину контейнера, чтобы кнопки могли переноситься */
+        margin: 0 auto;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
 /* Галерея */
 #case-container {
     display: grid;
@@ -153,7 +162,7 @@ body {
 
 .case {
     background: rgba(255, 255, 255, 0.113);
-    border-radius: 10px;
+    border-radius: 20px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
 }
@@ -165,7 +174,7 @@ body {
 .case img {
     width: 100%;
     height: auto;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 .case h3 {
@@ -183,6 +192,7 @@ body {
 .reset-filter {
     display: none; /* Скрыта по умолчанию */
     font-size: 12px;
+    min-width: 115px;
     color: #777; /* Менее заметный цвет */
     cursor: pointer;
     position: relative;
