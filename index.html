@@ -26,15 +26,15 @@
         });
 
         // 3. Блокируем комбинации клавиш (Ctrl + S, Ctrl + U, Ctrl + P, F12)
-        document.addEventListener("keydown", (event) => {
-          if (
-            (event.ctrlKey &&
-              (event.key === "s" || event.key === "u" || event.key === "p")) ||
-            event.key === "F12"
-          ) {
-            event.preventDefault(); // Отключаем сохранение, просмотр кода и печать
-          }
-        });
+        // document.addEventListener("keydown", (event) => {
+        //   if (
+        //     (event.ctrlKey &&
+        //       (event.key === "s" || event.key === "u" || event.key === "p")) ||
+        //     event.key === "F12"
+        //   ) {
+        //     event.preventDefault(); // Отключаем сохранение, просмотр кода и печать
+        //   }
+        // });
 
         // 4. Запрещаем скачивание изображений (добавляем атрибут "oncontextmenu='return false'")
         document.querySelectorAll("img").forEach((img) => {
@@ -67,14 +67,14 @@
       </div>
       <div id="filter-buttons">
         <!-- Перечень тегов: маркетплейсы, печатная_продукция, веб-дизайн, презентация, упаковка, мобильные приложения, социальные сети, логотип, -->
-        <button class="filter-button" data-tag="UX_UI">
+        <!-- <button class="filter-button" data-tag="UX_UI">
           UX/UI
-        </button>
+        </button> -->
         <button class="filter-button" data-tag="веб_дизайн">веб-дизайн</button>
         <button class="filter-button" data-tag="мобильное_приложение">мобильное приложение</button>
-        <button class="filter-button" data-tag="печатная_продукция">
+        <!-- <button class="filter-button" data-tag="печатная_продукция">
           полиграфия
-        </button>
+        </button> -->
         <!-- <button class="filter-button" data-tag="презентация">презентация</button>
         <button class="filter-button" data-tag="3D">
           3D
@@ -143,11 +143,20 @@
       filteredCases.forEach((caseItem) => {
         const caseElement = document.createElement("div");
         caseElement.classList.add("case");
+
+        let linkHTML = caseItem.link 
+        ? `<p><a class="out-link" href="${caseItem.link}" target="_blank" rel="noopener noreferrer">
+              попробуй меня 
+              <img src="images/icons/link-icon.svg" alt="иконка" class="link-icon">
+           </a></p>` 
+        : '';
+
         caseElement.innerHTML = `
-            <img src="${caseItem.image_url}" alt="${caseItem.title}">
-            <h3>${caseItem.title}</h3>
-            <p>${caseItem.description}</p>
+        <img src="${caseItem.image_url}" alt="${caseItem.title}">
+        <h3>${caseItem.title}</h3>
+        ${linkHTML}
         `;
+
         container.appendChild(caseElement);
       });
 
